@@ -138,7 +138,6 @@ class pdf_parser {
      */
     function getEncryption() {
         if (isset($this->xref['trailer'][1]['/Encrypt'])) {
-						dpm(debug_backtrace());
             $this->error('File "' . basename($this->filename) . '" is encrypted!');
         }
     }
